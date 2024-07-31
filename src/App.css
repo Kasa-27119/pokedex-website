@@ -1,5 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-image: url("https://images2.alphacoders.com/115/thumb-1920-1154079.jpg");
+    background-position: center;
+    background-repeat: space;
+    backdrop-filter: blur(2px);
+    /* background-color: #e1cdf4; */
+}
+
+#pokemon-display-grid {
+    display: grid;
+    grid-template-columns:  repeat(3, 360px);
+    gap: 50px;
+    margin: 30px 20px;
+    justify-content: center;
+}
+
+.pokemon-card {
+    padding: 15px;
+    /* background-color: rgba(255, 255, 255, 0.831); */
+    box-shadow: -4px 6px #84d5dc;
+
+    border: 5px solid rgb(93, 79, 214);
+    box-shadow: 5px 5px #84d5dc,
+                10px 10px #d6f1d5,
+                15px 15px #9359ca;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#title {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 4em;
+    color: #ffffff;
+}
+
+.poke-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+
+.poke-img {
+    width: 250px;
+}
+
+#header {
+    height: auto;
+    width: 100%;
+    background-color: #60cbd5;
+    padding: 10px 30px;
+
+    display: flex;
+}
+
+#pikachu-sprite {
+    width: 80px;
+    margin-left: 15px;
+}
+
+#search-container, #type-container {
+    height: auto;
+    width: 100%;
+    background-color: #edf7f8;
+    color: rgb(93, 79, 214);
+    padding: 10px 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1.4em;
+    display: flex;
+}
+
+
+
