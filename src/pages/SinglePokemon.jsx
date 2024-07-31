@@ -34,7 +34,7 @@ const SinglePokemon = () => {
   return (
     <div
       // inline styling - change bg color based on type - type colors
-      style={{backgroundColor:typeColors[selectedPokemon.types[0].toLowerCase()]}}
+      style={{backgroundColor:typeColors[selectedPokemon.types[0].toLowerCase()]}} className="single-pokemon-card"
     >
       {/* back button - go back 1 page */}
       <button onClick={() => navigate(-1)}>Go Back</button>

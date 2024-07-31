@@ -7,30 +7,36 @@
 }
 
 body {
-    background-image: url("https://images2.alphacoders.com/115/thumb-1920-1154079.jpg");
+    background-image: url("https://images.unsplash.com/photo-1647892591711-f310c2a3ab7c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-position: center;
-    background-repeat: space;
+    background-size: contain;
     backdrop-filter: blur(2px);
-    /* background-color: #e1cdf4; */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #pokemon-display-grid {
     display: grid;
-    grid-template-columns:  repeat(3, 360px);
+    grid-template-columns:  repeat(4, 300px);
     gap: 50px;
     margin: 30px 20px;
     justify-content: center;
 }
 
 .pokemon-card {
+    transition: all 0.2s ease;
     padding: 15px;
-    /* background-color: rgba(255, 255, 255, 0.831); */
-    box-shadow: -4px 6px #84d5dc;
+    background-color: #ffffffe8 !important;
 
-    border: 5px solid rgb(93, 79, 214);
-    box-shadow: 5px 5px #84d5dc,
-                10px 10px #d6f1d5,
-                15px 15px #9359ca;
+    border: 4px solid #030207;
+    /* box-shadow: 3px 3px #ffef5c,
+                7px 7px #e41919; */
+    border-image: linear-gradient(0deg, #ffef5c, #e41919);
+    border-image-slice: 1;
+    animation: gradient 8s infinite linear;
 
     display: flex;
     flex-direction: column;
@@ -46,10 +52,11 @@ body {
 }
 
 .poke-text {
+    /* transition: color 0.2s ease; */
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 2em;
-    color: rgb(255, 255, 255);
+    color: #030207;
 }
 
 .poke-img {
@@ -58,8 +65,8 @@ body {
 
 #header {
     height: auto;
-    width: 100%;
-    background-color: #60cbd5;
+    width: 100vw;
+    background-color: #030207;
     padding: 10px 30px;
 
     display: flex;
@@ -72,14 +79,88 @@ body {
 
 #search-container, #type-container {
     height: auto;
+    padding: 15px 0;
     width: 100%;
-    background-color: #edf7f8;
-    color: rgb(93, 79, 214);
+    background-color: #ffffffe8;
+    color: #2456a5;
     padding: 10px 30px;
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 1.4em;
+    
     display: flex;
+    justify-content: center;
+}
+
+#search-container label, #type-container label {
+    margin-right: 10px;
+    color: #e41919;
+    font-weight: 600;
+}
+
+#search-container input, #type-container select {
+    transition: border 0.2s ease;
+    border: 3px solid #030207;
+    font-family: "Inter", sans-serif;
+    border-radius: 7px;
+}
+
+/* single pokemon page */
+.single-pokemon-card {
+    background-color: #ffffffe8 !important;
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.single-pokemon-card img {
+    border: 3px solid #030207;
+    border-image: linear-gradient(0deg, #ffef5c, #e41919);
+    border-image-slice: 1;
+    background-image: url("https://images.unsplash.com/photo-1668119064317-af122b3a0810?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+
+/* hover effects */
+.pokemon-card:hover {
+    transition: all 0.2s ease;
+    scale: 1.07;
+    color: #ffef5c;
+}
+
+.poke-text:hover {
+    transition: color 0.2s ease;
+    color: #e41919;
+}
+
+#search-container input:hover, #type-container select:hover {
+    transition: border 0.2s ease;
+    border: 3px solid #e41919;
+}
+
+/* gradient keyframes */
+@keyframes gradient {
+    0% {
+        border-image: linear-gradient(0deg, #ffef5c, #e41919);
+        border-image-slice: 1;
+    }
+    25% {
+        border-image: linear-gradient(90deg, #ffef5c, #e41919);
+        border-image-slice: 1;
+    }
+    50% {
+        border-image: linear-gradient(180deg, #ffef5c, #e41919);
+        border-image-slice: 1;
+    }
+    75% {
+        border-image: linear-gradient(270deg, #ffef5c, #e41919);
+        border-image-slice: 1;
+    }
+    100% {
+        border-image: linear-gradient(360deg, #ffef5c, #e41919);
+        border-image-slice: 1;
+    }
 }
 
 

@@ -168,8 +168,8 @@ const Homepage = () => {
             >
               <img src={item.imageURL} alt={item.name} className='poke-img'/>
               <p id='poke-id' className='poke-text'>{item.id}</p>
-              <p className='poke-text'>{item.name}</p>
-              <p className='poke-text'>{item.types.join(", ")}</p>
+              <p className='poke-text' id='poke-name'>{item.name}</p>
+              <p className='poke-text' id='poke-types'>{item.types.join(", ")}</p>
             </div>
           ))
         )}
